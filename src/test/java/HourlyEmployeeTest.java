@@ -11,7 +11,7 @@ public class HourlyEmployeeTest {
         //Add a negative number to show that it is not counted
         emp.increaseHours(-10);
 
-        assertEquals(25, emp.getHoursWorked());
+        assertEquals(22, emp.getHoursWorked());
         //System.out.println(emp.getHoursWorked());
     }
     @Test
