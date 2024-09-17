@@ -16,5 +16,17 @@ public class CommissionEmployeeTest {
 
     }
     @Test
-    void 
+    void noHolidayBonusPay(){
+        var emp = new CommissionEmployee("Clint", "Barton", 6847, "Sales", "Customer Representative", .0265);
+        assertEquals(0,emp.holidayBonus());
+
+    }
+
+    @Test
+    void addAnnualRaiseCalledTwice(){
+        var emp = new CommissionEmployee("Clint", "Barton", 6847, "Sales", "Customer Representative", .0265);
+        emp.annualRaise();
+        emp.annualRaise();
+        assertEquals(.0305, emp.getRate());
+    }
 }
